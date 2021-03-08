@@ -1,2 +1,3 @@
-# Install_NVM
-Install NVM with Curl and Bash script.
+#Debian_Install_NVM
+
+Install NVM on Debian with Curl and Bash script.
