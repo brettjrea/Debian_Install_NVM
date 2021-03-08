@@ -19,7 +19,7 @@ export NVM_DIR="$HOME/.nvm"
 *You may need to close and reopen the terminal to start using NVM and run the following command to install LTS.*
 
 ```
-nvm install LTS
+nvm install --lts
 ```
 
 ---
