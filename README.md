@@ -1,4 +1,4 @@
-# Debian_Install_NVM_NPM_LTS
+# Debian_Install_NVM
 
 Install NVM and NPM LTS on Debian with Curl and Bash script.
 
