@@ -7,14 +7,16 @@ Install NVM and NPM LTS on Debian with Curl and Bash script.
 ## Commands:
 ```
 sudo apt install curl &&
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash &&
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" &&
-nvm install LTS
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
 
-*You may need to close and reopen the terminal to start using NVM and re-run the following command to continue.*
+```
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+```
+
+*You may need to close and reopen the terminal to start using NVM and run the following command to install LTS.*
 
 ```
 nvm install LTS
