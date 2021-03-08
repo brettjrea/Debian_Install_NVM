@@ -1,4 +1,6 @@
-#Debian_Install_NVM
+# Debian_Install_NVM
+
+---
 
 Install NVM on Debian with Curl and Bash script.
 
@@ -21,3 +23,6 @@ export NVM_DIR="$HOME/.nvm"
 ```
 nvm install LTS
 ```
+
+---
+
