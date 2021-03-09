@@ -33,10 +33,13 @@ sudo apt upgrade -y && sudo apt update -y && sudo apt autoremove -y
 sudo apt install curl
 ```
 
-### Commands:
+### Download NVM installer script with Curl:
+
 ```
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 ```
+
+### Add environmental variables:
 
 ```
 export NVM_DIR="$HOME/.nvm"
@@ -45,6 +48,8 @@ export NVM_DIR="$HOME/.nvm"
 ```
 
 *You may need to close and reopen the terminal to start using NVM and run the following command to install LTS.*
+
+### Use NVM to install NPM LTS:
 
 ```
 nvm install --lts
