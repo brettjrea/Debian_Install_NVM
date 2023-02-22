@@ -3,9 +3,6 @@
 # update and upgrade packages
 sudo apt update -y && sudo apt upgrade -y
 
-# install ca certs
-sudo apt-get install --reinstall ca-certificates -y
-
 # remove unused packages
 sudo apt autoremove -y
 
