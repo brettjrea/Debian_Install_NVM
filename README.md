@@ -19,17 +19,30 @@ sudo apt clean -y
 ```
 ---
 
-### This is the original commands only:
+### This is the script as a oneliner.
 
 ```
-sudo apt upgrade -y && sudo apt update -y && sudo apt autoremove -y
+
+sudo apt update -y &&
+sudo apt upgrade -y && 
+sudo apt autoremove -y && 
+sudo apt-get install --reinstall ca-certificates -y && 
 sudo apt install curl -y && 
-sudo apt-get install --reinstall ca-certificates -y &&
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-nvm install --lts
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash && 
+export NVM_DIR="$HOME/.nvm" && 
+[ -s "$NVM_DIR/nvm.sh" ] && 
+. "$NVM_DIR/nvm.sh" && 
+[ -s "$NVM_DIR/bash_completion" ] && 
+. "$NVM_DIR/bash_completion" && 
+nvm install --lts && 
+echo "export NVM_DIR="$HOME/.nvm"" >> ~/.bashrc && 
+echo "[ -s "$NVM_DIR/nvm.sh" ] && 
+\. "$NVM_DIR/nvm.sh"" >> ~/.bashrc && 
+echo "[ -s "$NVM_DIR/bash_completion" ] && 
+\. "$NVM_DIR/bash_completion"" >> ~/.bashrc && 
+echo "export PATH="$NVM_DIR/versions/node/$(nvm version)/bin:$PATH"" >> ~/.bashrc && 
+exec bash
+
 ```
 
 ---
