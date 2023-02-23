@@ -23,7 +23,8 @@ sudo apt clean -y
 
 ```
 sudo apt upgrade -y && sudo apt update -y && sudo apt autoremove -y
-sudo apt install curl -y
+sudo apt install curl -y && 
+sudo apt-get install --reinstall ca-certificates -y &&
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
@@ -45,9 +46,18 @@ sudo apt upgrade -y && sudo apt update -y && sudo apt autoremove -y
 ### Install required programs:
 
 ```
+
 sudo apt install curl -y
+
 ```
 
+### Prevents a certificate error.
+
+```
+
+sudo apt-get install --reinstall ca-certificates -y
+
+```
 ### Download NVM installer script with Curl:
 
 ```
