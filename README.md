@@ -1,5 +1,11 @@
 # Debian_Install_NVM
 
+* You might have [Upgraded to Buster](https://github.com/brettjrea/Debian_Bullseye_Upgrade_Script)
+
+* You might have [Upgraded to Jammy](https://github.com/brettjrea/Ubuntu_Jammy_Upgrade_Script)
+
+---
+
 Install NVM and NPM LTS on Debian/Ubuntu with Curl and Bash script.
 
 ---
