@@ -63,8 +63,11 @@ echo "export PATH="$NVM_DIR/versions/node/$(nvm version)/bin:$PATH"" >> ~/.bashr
 exec bash
 ```
 
+<details>
 ---
+<summary>Command Breakdown</summary>
 ### Update and Upgrade System
+
 
 ```
 sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y
@@ -147,3 +150,4 @@ This command restarts the bashrc to apply the changes made in the previous comma
 ---
 
 *You should now [Install common build tools.](https://github.com/brettjrea/Debian_Install_Common_Build_Tools)*
+<details>
