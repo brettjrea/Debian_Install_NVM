@@ -1,0 +1,32 @@
+name: Generate Bash and README
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  repository_dispatch:
+    types: [file-changed]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Copy install-nvm.sh
+        run: |
+          curl -sS https://raw.githubusercontent.com/brettjrea/GitHub_Generate_Readme/main/bash/install-nvm.sh --output install-nvm.sh
+       
+      - name: Combine files
+        run: |
+          toc=$(curl -sS https://raw.githubusercontent.com/brettjrea/GitHub_Generate_Readme/main/readme/generate-readme-table-of-contents.md)
+          config=$(curl -sS https://raw.githubusercontent.com/brettjrea/GitHub_Generate_Readme/main/readme/debian-install-nvm.md)
+          readme="$(echo -e "${toc}\n---\n${config}")"
+          echo "${readme}" > README.md
+
+      - name: Auto commit
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: 'Auto commit copied install-nvm.sh'
